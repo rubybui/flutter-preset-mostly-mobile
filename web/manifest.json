@@ -1,6 +1,6 @@
 {
-    "name": "presetup",
-    "short_name": "presetup",
+    "name": "friends",
+    "short_name": "friends",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

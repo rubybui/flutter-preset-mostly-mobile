@@ -3,7 +3,8 @@ import 'dart:developer';
 import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:presetup/utilities/router.dart';
+import 'package:friends/utilities/router.dart';
+import 'package:universal_platform/universal_platform.dart';
 
 class SplashScreen extends ConsumerStatefulWidget {
   const SplashScreen({super.key});
@@ -20,6 +21,9 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
   }
 
   initSystem() async {
+    if (UniversalPlatform.isWeb) {
+      return ref.read(routerProvider).go("/login");
+    }
     FirebaseDynamicLinks dynamicLinks = FirebaseDynamicLinks.instance;
     // Get any initial links
     PendingDynamicLinkData? initialLink = await dynamicLinks.getInitialLink();

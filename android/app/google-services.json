@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "286092341651",
+    "project_id": "notlocal-kzrpui",
+    "storage_bucket": "notlocal-kzrpui.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286092341651:android:7846b6e9f2d5616efaf866",
+        "android_client_info": {
+          "package_name": "com.mycompany.locabiometric"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "286092341651-uqr60752vcv6gbh5pojj544m726497j8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKRDGrOMKBGRNfmFYx4aMlGXvHKqdfakk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "286092341651-uqr60752vcv6gbh5pojj544m726497j8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "286092341651-0t5sfsijv3n5rgt0tloq8vav1fd0gur4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "friends"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

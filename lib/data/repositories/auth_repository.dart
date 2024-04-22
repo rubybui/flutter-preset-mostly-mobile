@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:presetup/utilities/auth_handler.dart';
-import 'package:presetup/utilities/enum.dart';
+import 'package:friends/utilities/auth_handler.dart';
+import 'package:friends/utilities/enum.dart';
 
 class AuthRepository {
   AuthRepository(this._auth);

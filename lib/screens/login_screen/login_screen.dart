@@ -4,10 +4,10 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:presetup/data/providers/auth_provider.dart';
-import 'package:presetup/flavor_banner.dart';
-import 'package:presetup/screens/login_screen/widgets/social_login.dart';
-import 'package:presetup/widgets/fp_button.dart';
+import 'package:friends/data/providers/auth_provider.dart';
+import 'package:friends/flavor_banner.dart';
+import 'package:friends/screens/login_screen/widgets/social_login.dart';
+import 'package:friends/widgets/fp_button.dart';
 
 class LoginScreen extends ConsumerStatefulWidget {
   const LoginScreen({super.key});

@@ -1,5 +1,5 @@
 import 'dart:developer';
-
+import 'package:universal_platform/universal_platform.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter/foundation.dart';
 import 'dart:async';
@@ -29,7 +29,7 @@ class NotificationService {
       FlutterLocalNotificationsPlugin();
 
   void setupLocalNotif() async {
-    !kIsWeb && Platform.isLinux
+    !kIsWeb && UniversalPlatform.isLinux
         ? null
         : await flutterLocalNotificationsPlugin
             .getNotificationAppLaunchDetails();
@@ -72,7 +72,7 @@ class NotificationService {
   }
 
   Future<void> _isAndroidPermissionGranted() async {
-    if (Platform.isAndroid) {
+    if (UniversalPlatform.isAndroid) {
       await flutterLocalNotificationsPlugin
               .resolvePlatformSpecificImplementation<
                   AndroidFlutterLocalNotificationsPlugin>()
@@ -82,7 +82,7 @@ class NotificationService {
   }
 
   Future<void> _requestPermissions() async {
-    if (Platform.isIOS || Platform.isMacOS) {
+    if (UniversalPlatform.isIOS || UniversalPlatform.isMacOS) {
       await flutterLocalNotificationsPlugin
           .resolvePlatformSpecificImplementation<
               IOSFlutterLocalNotificationsPlugin>()
@@ -101,7 +101,7 @@ class NotificationService {
             sound: true,
             critical: true,
           );
-    } else if (Platform.isAndroid) {
+    } else if (UniversalPlatform.isAndroid) {
       final AndroidFlutterLocalNotificationsPlugin? androidImplementation =
           flutterLocalNotificationsPlugin.resolvePlatformSpecificImplementation<
               AndroidFlutterLocalNotificationsPlugin>();

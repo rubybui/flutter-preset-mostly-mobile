@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:presetup/data/providers/auth_provider.dart';
-import 'package:presetup/screens/dashboard_screen.dart';
-import 'package:presetup/screens/login_screen/login_screen.dart';
-import 'package:presetup/screens/splash_screen.dart';
-import 'package:presetup/utilities/router_refresh.dart';
+import 'package:friends/data/providers/auth_provider.dart';
+import 'package:friends/screens/dashboard_screen.dart';
+import 'package:friends/screens/login_screen/login_screen.dart';
+import 'package:friends/screens/splash_screen.dart';
+import 'package:friends/utilities/router_refresh.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 // GoRouter configuration

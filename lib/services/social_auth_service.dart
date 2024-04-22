@@ -4,11 +4,10 @@ import 'dart:math' as dm;
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:presetup/data/providers/auth_provider.dart';
-import 'package:presetup/utilities/enum.dart';
+import 'package:friends/data/providers/auth_provider.dart';
+import 'package:friends/utilities/enum.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 import 'package:crypto/crypto.dart';
 
@@ -42,36 +41,6 @@ class AuthService {
       status = await ref
           .read(signInProvider.notifier)
           .signInWithCredential(credential);
-
-      return status;
-    } catch (error) {
-      log("$error");
-      EasyLoading.dismiss();
-      return AuthResultStatus.undefined;
-    }
-  }
-
-  Future<AuthResultStatus> facebookSignIn() async {
-    log("facebook sign in -----");
-    try {
-      final LoginResult result = await FacebookAuth.instance.login();
-      EasyLoading.show();
-      if (result.status == LoginStatus.success) {
-        final AccessToken accessToken = result.accessToken!;
-        final userData = await FacebookAuth.i.getUserData();
-        final OAuthCredential credential =
-            FacebookAuthProvider.credential(accessToken.token);
-        log("facebook status $userData");
-        status = await ref
-            .read(signInProvider.notifier)
-            .signInWithCredential(credential);
-      } else if (result.status == LoginStatus.cancelled) {
-        return AuthResultStatus.cancelled;
-      } else {
-        log("facebook status ${result.status}");
-        log("facebook message ${result.message}");
-        status = AuthResultStatus.undefined;
-      }
 
       return status;
     } catch (error) {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:presetup/utilities/theme.dart';
+import 'package:friends/utilities/theme.dart';
 
 class FpButton extends StatelessWidget {
   const FpButton({

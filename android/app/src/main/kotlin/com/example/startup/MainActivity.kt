@@ -1,4 +1,4 @@
-package com.example.presetup
+package friends
 
 import io.flutter.embedding.android.FlutterActivity
 

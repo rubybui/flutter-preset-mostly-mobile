@@ -1,14 +1,14 @@
 import 'dart:developer';
 import 'dart:io';
-
+import 'package:universal_platform/universal_platform.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:presetup/services/social_auth_service.dart';
-import 'package:presetup/utilities/auth_handler.dart';
-import 'package:presetup/utilities/enum.dart';
-import 'package:presetup/utilities/router.dart';
-import 'package:presetup/widgets/fp_button.dart';
+import 'package:friends/services/social_auth_service.dart';
+import 'package:friends/utilities/auth_handler.dart';
+import 'package:friends/utilities/enum.dart';
+import 'package:friends/utilities/router.dart';
+import 'package:friends/widgets/fp_button.dart';
 
 class SocialLogin extends ConsumerWidget {
   const SocialLogin({
@@ -60,18 +60,6 @@ class SocialLogin extends ConsumerWidget {
       return result;
     }
 
-    Future<AuthResultStatus> signInWithFacebook() async {
-      log("fcb sign in");
-      final AuthResultStatus result = await AuthService(ref).facebookSignIn();
-
-      if (result == AuthResultStatus.successful) {
-        await redirectOnLogin();
-      }
-      handleSocialLogin(result);
-
-      return result;
-    }
-
     Future<AuthResultStatus> signInWithApple() async {
       log("apple sign in");
       final AuthResultStatus result = await AuthService(ref).appleSignIn();
@@ -88,7 +76,7 @@ class SocialLogin extends ConsumerWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 25),
       child: SizedBox(
-        width: Platform.isIOS ? sizeW * 60 : sizeW * 40,
+        width: UniversalPlatform.isIOS ? sizeW * 60 : sizeW * 40,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -100,13 +88,7 @@ class SocialLogin extends ConsumerWidget {
                 await signInWithGoogle();
               },
             ),
-            FpButton(
-              title: "Facebook Login",
-              onPressed: () async {
-                await signInWithFacebook();
-              },
-            ),
-            if (Platform.isIOS)
+            if (UniversalPlatform.isIOS)
               FpButton(
                 title: "Apple Login",
                 onPressed: () async {

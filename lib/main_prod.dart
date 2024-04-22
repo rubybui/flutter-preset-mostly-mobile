@@ -1,14 +1,14 @@
-import 'package:presetup/firebase_options_prod.dart';
-import 'package:presetup/flavor_config.dart';
-import 'package:presetup/main_common.dart';
+import 'package:friends/firebase_options_prod.dart';
+import 'package:friends/flavor_config.dart';
+import 'package:friends/main_common.dart';
 
 void main() {
   FlavorConfig(
     flavor: Flavor.prod,
     env: "prod",
-    name: "FlutterPresetup",
+    name: "friends",
     values: FlavorValues(
-        bundleID: 'com.example.presetup',
+        bundleID: 'friends',
         appID: '',
         baseUrl: '',
         apiUrl: '',

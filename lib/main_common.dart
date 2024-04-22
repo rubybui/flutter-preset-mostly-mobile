@@ -5,31 +5,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:presetup/data/providers/auth_provider.dart';
-import 'package:presetup/data/providers/theme_provider.dart';
-import 'package:presetup/services/push_notif_service.dart';
-import 'package:presetup/utilities/router.dart';
+
+import 'package:friends/data/providers/auth_provider.dart';
+import 'package:friends/data/providers/theme_provider.dart';
+
+import 'package:friends/utilities/router.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
-import 'package:presetup/utilities/theme.dart';
+import 'package:friends/utilities/theme.dart';
 
 void mainCommon(options) async {
   WidgetsFlutterBinding.ensureInitialized();
-  MobileAds.instance.initialize();
+
   await EasyLocalization.ensureInitialized();
   await Firebase.initializeApp(
     options: options,
   );
   FirebaseAnalytics analytics = FirebaseAnalytics.instance;
-  final pushNotifService = PushNotificationsService();
 
-  if (Platform.isIOS) {
-    Future.delayed(const Duration(milliseconds: 500), () async {
-      await pushNotifService.registerNotification();
-    });
-  } else {
-    await pushNotifService.registerNotification();
-  }
 
   //SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   final container = ProviderContainer();

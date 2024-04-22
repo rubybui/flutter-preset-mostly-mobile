@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "FlutterPresetup DEV",
+            "name": "friends DEV",
             "request": "launch",
             "type": "dart",
             "flutterMode": "debug",
@@ -13,7 +13,7 @@
             "args": ["--flavor", "dev"],
         },
         {
-            "name": "FlutterPresetup PROD",
+            "name": "friends PROD",
             "request": "launch",
             "type": "dart",
             "flutterMode": "debug",
@@ -21,7 +21,7 @@
             "args": ["--flavor", "prod"]
         },
         {
-            "name": "FlutterPresetup (profile mode)",
+            "name": "friends (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile",

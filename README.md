@@ -2,7 +2,7 @@
 
 ## More structured documentation
 
-[Flutter Presetup Gitbook](https://flutterapid.gitbook.io/flutter-presetup/)
+[Flutter Presetup Gitbook](https://flutterapid.gitbook.io/flutter-friends/)
 
 This is a small project that saves me time when I need to start new project from scratch including flavors and firebase. It's kinda suited to my needs but it may help someone. Currently it's focused on iOS and Android.
 
@@ -62,7 +62,7 @@ sh rename.sh
 ```
 
 NOTE if script does not execute till the end:
-If the last command grep and replace is not working on your OS just search and replace inside your text editor for "presetup" which is current package name and replace every occurance with something you want.
+If the last command grep and replace is not working on your OS just search and replace inside your text editor for "friends" which is current package name and replace every occurance with something you want.
 
 ### Step 2) Create Signature key for Android
 

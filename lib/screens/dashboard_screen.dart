@@ -3,12 +3,10 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:presetup/data/providers/auth_provider.dart';
-import 'package:presetup/data/providers/theme_provider.dart';
-import 'package:presetup/flavor_banner.dart';
-import 'package:presetup/widgets/ads/banner_ad_block.dart';
-import 'package:presetup/widgets/ads/native_ad_block.dart';
-import 'package:presetup/widgets/ads/reward_ad_block.dart';
+import 'package:friends/data/providers/auth_provider.dart';
+import 'package:friends/data/providers/theme_provider.dart';
+import 'package:friends/flavor_banner.dart';
+
 
 class DashboardScreen extends ConsumerStatefulWidget {
   const DashboardScreen({super.key});
@@ -69,24 +67,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
               Text("version: $version"),
               Text("buildNumber: $buildNumber"),
               const Divider(),
-              const Text(
-                "Banner Ad",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
-              ),
-              const Padding(
-                  padding: EdgeInsets.all(20), child: BannerAdBlock()),
-              const Text(
-                "Native Ad",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
-              ),
-              const Padding(
-                  padding: EdgeInsets.all(20), child: NativeAdBlock()),
-              const Text(
-                "Rewarded Inter. Ad",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
-              ),
-              const Padding(
-                  padding: EdgeInsets.all(20), child: RewardAdBlock()),
+  
               const Divider(),
               const SizedBox(
                 height: 50,

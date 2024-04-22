@@ -1,4 +1,4 @@
-package com.example.presetup
+package friends
 
 import android.content.Context
 import android.view.LayoutInflater

@@ -8,7 +8,7 @@ I made a little script that will update everything accordingly so run:
 sh rename.sh
 ```
 
-NOTE if the script does not execute till the end: If the last command grep and replace is not working on your OS just search and replace inside your text editor for "presetup" which is the current package name and replace every occurrence with something you want.
+NOTE if the script does not execute till the end: If the last command grep and replace is not working on your OS just search and replace inside your text editor for "friends" which is the current package name and replace every occurrence with something you want.
 
 #### Step 2) Create a Signature key for the Android
 

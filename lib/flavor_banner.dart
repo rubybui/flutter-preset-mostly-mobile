@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:presetup/flavor_config.dart';
+import 'package:friends/flavor_config.dart';
 
 // ignore: must_be_immutable
 class FlavorBanner extends StatelessWidget {
